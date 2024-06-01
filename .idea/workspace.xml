@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04e5daa4-cfdd-4062-a0a1-784838de0582" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tracker/management/commands/generate_transactions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker/templates/tracker/transaction-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_project/templates/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/finance_project/templates/account/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_project/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/templates/tracker/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/templates/tracker/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/templates/tracker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/templates/tracker/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/templates/tracker/partials/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/templates/tracker/partials/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +25,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -38,6 +44,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main"

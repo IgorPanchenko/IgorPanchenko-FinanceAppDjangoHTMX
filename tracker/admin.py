@@ -3,4 +3,3 @@ from tracker.models import Category, Transaction
 
 admin.site.register(Category)
 admin.site.register(Transaction)
-# Register your models here.

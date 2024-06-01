@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     
     # external apps
+    "django_filters",
     "django_extensions",
     "debug_toolbar",
     "widget_tweaks",
@@ -37,8 +38,6 @@ INSTALLED_APPS = [
     
     # project apps
     "tracker",
-    
-    
 ]
 
 SITE_ID = 1
