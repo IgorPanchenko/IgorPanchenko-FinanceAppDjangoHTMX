@@ -14,7 +14,12 @@ def transaction_list(request):
         request.GET,
         queryset=Transaction.objects.filter(user=request.user).select_related('category')
     )
-    context = {'filter': transaction_filter}
+    total_income = transaction_filter.qs.get_total_income()
+    total_expenses = transaction_filter.qs.get_total_expenses()
+    context = {'filter': transaction_filter,
+               'total_expenses': total_expenses,
+               'total_income': total_income,
+               'net_income': total_income - total_expenses}
     if request.htmx:
         return render(request, 'tracker/partials/transaction-container.html', context)
     return render(request, 'tracker/transaction-list.html', context)
