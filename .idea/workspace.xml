@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04e5daa4-cfdd-4062-a0a1-784838de0582" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tracker/tests/test_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker/templates/tracker/partials/create-transaction.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker/templates/tracker/partials/transaction-success.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finance_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/templates/tracker/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/templates/tracker/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/templates/tracker/partials/transaction-container.html" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/templates/tracker/partials/transaction-container.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/templates/tracker/transaction-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/templates/tracker/transaction-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>

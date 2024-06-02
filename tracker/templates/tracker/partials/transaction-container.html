@@ -18,18 +18,34 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>{{total_income|floatformat:2|intcomma}}</td>
-                        <td>{{total_expenses|floatformat:2|intcomma}}</td>
-                        <td>{{net_income|floatformat:2|intcomma}}</td>
-                    </tr>
+                <tr>
+                    <td>{{total_income|floatformat:2|intcomma}}</td>
+                    <td>{{total_expenses|floatformat:2|intcomma}}</td>
+                    <td>{{net_income|floatformat:2|intcomma}}</td>
+                </tr>
                 </tbody>
             </table>
         </div>
+        <div class="flex justify-between items-center mt-4 mb-6">
 
-        <h1 class="mt-8 mb-6 prose prose-2xl text-white">
-            Переводы
-        </h1>
+            <h1 class="mt-8 mb-6 prose prose-2xl text-white">
+                Переводы
+            </h1>
+
+            <a hx-get="{% url 'create-transaction' %}"
+                hx-push-url="true"
+                hx-target="#transaction-block"
+                class="cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="green" viewBox="0 0 24 24" stroke-width="1.5"
+                 stroke="currentColor" class="size-10">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                </svg>
+            </a>
+
+
+        </div>
+
 
         {% if filter.qs %}
         <table class="table">
@@ -69,17 +85,17 @@
               hx-swap="outerHTML">
 
             <div class="mb-2 form-control">
-                {{ filter.form.transaction_type|add_label_class:"label text-while" }}
+                {{ filter.form.transaction_type|add_label_class:"label text-white" }}
                 {% render_field filter.form.transaction_type class="select bg-gray-50 text-gray-900" %}
             </div>
 
             <div class="mb-2 form-control">
-                {{ filter.form.start_date|add_label_class:"label text-while" }}
+                {{ filter.form.start_date|add_label_class:"label text-white" }}
                 {% render_field filter.form.start_date class="input bg-gray-50 text-gray-900" %}
             </div>
 
             <div class="mb-2 form-control">
-                {{ filter.form.end_date|add_label_class:"label text-while" }}
+                {{ filter.form.end_date|add_label_class:"label text-white" }}
                 {% render_field filter.form.end_date class="input bg-gray-50 text-gray-900" %}
             </div>
 
