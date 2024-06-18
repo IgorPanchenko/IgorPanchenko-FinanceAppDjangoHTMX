@@ -6,9 +6,9 @@
 
 {% block content %}
 <div class="flex flex-col items-center text-white">
-  <h1 class="text-4xl tracking-wide dark:text-white my-4">{% trans "Sign Out" %}</h1>
+  <h1 class="text-4xl tracking-wide dark:text-white my-4">{% trans "Выход" %}</h1>
 
-  <p class="mt-2">{% trans 'Are you sure you want to sign out?' %}</p>
+  <p class="mt-2">{% trans 'Вы уверены что хотите выйти?' %}</p>
 
   <form method="post" action="{% url 'account_logout' %}">
     {% csrf_token %}
