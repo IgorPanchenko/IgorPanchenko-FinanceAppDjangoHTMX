@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django_htmx.http import retarget
 
 from tracker.filters import TransactionFilter
 from tracker.forms import TransactionForm
@@ -35,5 +36,9 @@ def create_transaction(request):
             transaction.save()
             context = {'message': 'Транзакция успешно выполнена'}
             return render(request, 'tracker/partials/transaction-success.html', context)
+        else:
+            context = {'form': form}
+            response = render(request, 'tracker/partials/create-transaction.html', context)
+            return retarget(response, '#transaction-block')
     context = {'form': TransactionForm()}
     return render(request, 'tracker/partials/create-transaction.html', context)
