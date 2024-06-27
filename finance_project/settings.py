@@ -81,12 +81,8 @@ WSGI_APPLICATION = "finance_project.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "HOST": os.getenv('POSTGRES_HOST', 'db_postgresql'),
-        "PORT": os.getenv('POSTGRES_PORT', 5432),
-        "USER": os.getenv('POSTGRES_USER', 'postgres'),
-        "PASSWORD": os.getenv('POSTGRES_PASSWORD'),
-        "NAME": os.getenv('POSTGRES_DB', 'db01'),
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 

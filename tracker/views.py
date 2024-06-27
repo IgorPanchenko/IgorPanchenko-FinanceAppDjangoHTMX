@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.http import require_http_methods
 from django_htmx.http import retarget
 
 from tracker.filters import TransactionFilter
@@ -64,3 +65,21 @@ def update_transaction(request, pk):
         'form': TransactionForm(instance=transaction),
         'transaction': transaction}
     return render(request, 'tracker/partials/update-transaction.html', context)
+
+@login_required
+@require_http_methods(['DELETE'])
+def delete_transaction(request, pk):
+    transaction = get_object_or_404(Transaction, pk=pk, user=request.user)
+    transaction.delete()
+    transaction_filter = TransactionFilter(
+        request.GET,
+        queryset=Transaction.objects.filter(user=request.user).select_related('category')
+    )
+    total_income = transaction_filter.qs.get_total_income()
+    total_expenses = transaction_filter.qs.get_total_expenses()
+    context = {'filter': transaction_filter,
+               'total_expenses': total_expenses,
+               'total_income': total_income,
+               'net_income': total_income - total_expenses}
+    return render(request, 'tracker/partials/transaction-container.html', context)
+
