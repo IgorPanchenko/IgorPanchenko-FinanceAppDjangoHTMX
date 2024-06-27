@@ -1,21 +1,21 @@
 {% load widget_tweaks %}
 <h1 class="mt-8 mb-6 prose prose-2xl text-white">
-    Создать перевод
+    Изменить транзакцию
 </h1>
 
 <form
-    hx-post="{% url 'create-transaction' %}"
+    hx-post="{% url 'update-transaction' transaction.pk %}"
     >
 
     {% include "tracker/partials/transaction-form.html" %}
 
     <button class="btn btn-success">
-        Добавить
+        Изменить
     </button>
     <button class="btn btn-error"
     hx-get="{% url 'transaction-list' %}"
     hx-target="#transaction-block"
-    hx-push-url="/transaction">
+    hx-push-url="/transactions">
         Отменить
     </button>
 </form>
